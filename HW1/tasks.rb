@@ -11,7 +11,7 @@ def ChetNechet (arr, number)
   puts
 end
 
-def ChetNechet (arr, number)
+ChetNechet(arr,0)
 ChetNechet(arr,1)
 p '----------------------------'
 
@@ -139,6 +139,7 @@ def Task9 arr
 print arr
 end
 Task9 arr
+puts
 p '----------------------------'
 
 
@@ -154,6 +155,7 @@ def Task10 arr
 print arr 
 end
 Task10 arr
+puts
 p '----------------------------'
 
 p '11.Дан целочисленный массив. Заменить все отрицательные элементы на значение минимального.'	
@@ -168,6 +170,7 @@ arr.length.times do | i |
 print arr
 end
 Task11 arr
+puts
 p '----------------------------'
 
 p '12.Дан целочисленный массив. Заменить все отрицательные элементы на значение максимального.	'
@@ -182,6 +185,7 @@ def Task12 arr
 print arr
 end
 Task12 arr
+puts
 p '----------------------------'
 
 
@@ -193,6 +197,7 @@ def Task13 arr
   print arr
 end
 Task13 arr
+puts
 p '----------------------------'
 
 
@@ -204,6 +209,7 @@ def Task14 arr
   print arr
 end
 Task14 arr
+puts
 p '----------------------------'
 
 
@@ -221,7 +227,7 @@ diffProgression=arr[1]-arr[0]
   end
 puts diffProgression
 end
-def Task15 arr
+ Task15 arr
 p '----------------------------'
 
 
