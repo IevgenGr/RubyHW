@@ -4,10 +4,10 @@ arr=[1,5,6,45,23,2,47]
 
 def ChetNechet (arr, number)
   if number%2>0
-   arr.each_index {|x| puts arr[x] if x % 2>0}
+   arr.each_index {|x| puts arr[x] if x%2>0}
   end
   if number%2==0
-   arr.each_index {|x| puts arr[x] if (x)% 2==0}
+   arr.each_index {|x| puts arr[x] if (x)%2==0}
   end
   puts
 end
@@ -23,10 +23,10 @@ arr=[1,5,6,45,23,2,47]
 
 def ChetNechet (arr, number)
   if number%2>0
-  	arr.each_index {|x| puts arr[x] if x % 2>0}
+  	arr.each_index {|x| puts arr[x] if x %2>0}
   end
   if number%2==0
-  	arr.each_index {|x| puts arr[x] if (x)% 2==0}
+  	arr.each_index {|x| puts arr[x] if (x)%2==0}
   end
   puts
 end
@@ -485,8 +485,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task27(arr)
- arr=arr.sort
- print arr
+ print arr.sort
 end
 
 Task27(arr)
@@ -499,8 +498,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task28(arr)
- arr=arr.sort.reverse
- print arr
+ print arr.sort.reverse
 end
 
 Task28(arr)
