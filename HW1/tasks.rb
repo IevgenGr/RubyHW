@@ -361,7 +361,7 @@ def Task21 (arr,r)
   arr.length.times do | i | 
     if diff>(arr[i]-r).abs
      diff= (arr[i]-r).abs
-    nearestValue=arr[i]
+     nearestValue=arr[i]
     end
  end
  puts nearestValue
