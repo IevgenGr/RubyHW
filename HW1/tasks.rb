@@ -3,11 +3,11 @@ p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
 def OddOrEven (arr, number)
-  if number%2>0
-    arr.each_index {|x| puts arr[x] if x%2>0}
+  if number % 2 > 0
+    arr.each_index {|x| puts arr[x] if x % 2 > 0}
   end
-  if number%2==0
-    arr.each_index {|x| puts arr[x] if (x)%2==0}
+  if number % 2 == 0
+    arr.each_index {|x| puts arr[x] if (x) % 2 == 0}
   end
  end
 
@@ -22,11 +22,11 @@ p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
 def OddOrEven (arr, number)
-  if number%2>0
-    arr.each_index {|x| puts arr[x] if x%2>0}
+  if number % 2 > 0
+    arr.each_index {|x| puts arr[x] if x % 2 > 0}
   end
-  if number%2==0
-    arr.each_index {|x| puts arr[x] if (x)%2==0}
+  if number % 2 == 0
+    arr.each_index {|x| puts arr[x] if (x) % 2 == 0}
   end
  end
 
@@ -40,17 +40,17 @@ p '3.Дан целочисленный массив. Вывести номер �
 p 'arr=[1,52,6,49,23,2,12]'
 arr=[1,52,6,49,23,2,12]
 
-def Task3 arr
+def Task_3 arr
   arr.length.times do | i | 
-   if (arr[0]<arr[i])&&(arr[i]<arr[-1])
-     @indexFirstElement=i
+   if (arr[0] < arr[i]) && (arr[i] < arr[-1])
+     @indexFirstElement = i
      break
    end
   end
   p @indexFirstElement
 end
 
-Task3 arr
+Task_3 arr
 p '----------------------------'
 
 
@@ -58,17 +58,17 @@ p '4.Дан целочисленный массив. Вывести номер �
 p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
-def Task4 arr
+def Task_4 arr
   arr.length.times do | i | 
-    if (arr[0]<arr[i])&&(arr[i]<arr[-1])
-     @indexLastElement=i
+    if (arr[0] < arr[i]) && (arr[i] < arr[-1])
+     @indexLastElement = i
     end
  end
   
 p @indexLastElement
 end
 
-Task4 arr
+Task_4 arr
 p '----------------------------'
 
 
@@ -76,16 +76,16 @@ p '5.Дан целочисленный массив. Преобразовать 
 p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
-def Task5 arr
+def Task_5 arr
   arr.length.times do | i | 
-    if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
-      arr[i]=arr[i]+arr[0]
+    if (arr[i] % 2 == 0) && (i != 0) && (i != (arr.length - 1))
+      arr[i] += arr[0]
     end
   end
   p arr
 end
 
-Task5 arr
+Task_5 arr
 p '----------------------------'
 
 
@@ -93,16 +93,16 @@ p '6.Дан целочисленный массив. Преобразовать 
 p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
-def Task6 arr
+def Task_6 arr
   arr.length.times do | i | 
-    if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
-      arr[i]=arr[i]+arr[arr.length-1]
+    if (arr[i] % 2 == 0) && (i != 0) && (i != (arr.length - 1))
+      arr[i] += arr[arr.length - 1]
     end
   end
   p arr
 end
 
-Task6 arr
+Task_6 arr
 p '----------------------------'
   
 
@@ -110,16 +110,16 @@ p '7.Дан целочисленный массив. Преобразовать 
 p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
-def Task7 arr
+def Task_7 arr
   arr.length.times do | i | 
-    if (arr[i]%2>0)&&(i != 0)&&(i != (arr.length-1))
-      arr[i]=arr[i]+arr[arr.length-1]
+    if (arr[i] % 2 > 0) && (i != 0) && (i != (arr.length - 1))
+      arr[i] += arr[arr.length - 1]
     end
   end
  p arr
 end
 
-Task7 arr
+Task_7 arr
 p '----------------------------'
 
 
@@ -127,16 +127,16 @@ p '8.Дан целочисленный массив. Преобразовать 
 p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
-def Task8 arr
+def Task_8 arr
   arr.length.times do | i | 
-    if (arr[i]%2>0)&&(i != 0)&&(i != (arr.length-1))
-      arr[i]=arr[i]+arr[0]
+    if (arr[i] % 2 > 0) && (i != 0) && (i != (arr.length - 1))
+      arr[i] += arr[0]
     end
   end
   p arr
 end
 
-Task8 arr
+Task_8 arr
 p '----------------------------'
 
 
@@ -144,16 +144,16 @@ p '9.Дан целочисленный массив. Заменить все п�
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
-def Task9 arr
+def Task_9 arr
   arr.length.times do | i | 
-    if (arr[i]>0)
-      arr[i]=arr.min
+    if (arr[i] > 0)
+      arr[i] = arr.min
     end
   end
   print arr
 end
 
-Task9 arr
+Task_9 arr
 puts
 p '----------------------------'
 
@@ -162,16 +162,16 @@ p '10.Дан целочисленный массив. Заменить все п
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
-def Task10 arr
+def Task_10 arr
   arr.length.times do | i | 
-    if (arr[i]>0)
-      arr[i]=arr.max
+    if (arr[i] > 0)
+      arr[i] = arr.max
     end
   end
   print arr 
 end
 
-Task10 arr
+Task_10 arr
 puts
 p '----------------------------'
 
@@ -180,16 +180,16 @@ p '11.Дан целочисленный массив. Заменить все о
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
-def Task11 arr
+def Task_11 arr
   arr.length.times do | i | 
-    if (arr[i]<0)
-      arr[i]=arr.min
+    if (arr[i] < 0)
+      arr[i] = arr.min
     end
   end
   print arr
 end
 
-Task11 arr
+Task_11 arr
 puts
 p '----------------------------'
 
@@ -198,30 +198,29 @@ p '12.Дан целочисленный массив. Заменить все о
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
-def Task12 arr
+def Task_12 arr
   arr.length.times do | i | 
-    if (arr[i]<0)
-      arr[i]=arr.max
+    if (arr[i] < 0)
+      arr[i] = arr.max
     end
   end
   print arr
 end
 
-Task12 arr
+Task_12 arr
 puts
 p '----------------------------'
 
 
-p '13.Дан целочисленный массив. Осуществить циклический сдвиг элементов массива влево на одну позицию.'	
+p '13.Дан целочисленный массив. Осуществить циклический сдвиг элементов массива влево на одну позицию.' 
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
-def Task13 arr
-  arr=arr.rotate
-  print arr
+def Task_13 arr
+  print arr.rotate
 end 
 
-Task13 arr
+Task_13 arr
 puts
 p '----------------------------'
 
@@ -230,12 +229,11 @@ p '14.Дан целочисленный массив. Осуществить ц�
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
-def Task14 arr
-  arr=arr.rotate(-1)
-  print arr
+def Task_14 arr
+  print arr.rotate(-1)
 end
 
-Task14 arr
+Task_14 arr
 puts
 p '----------------------------'
 
@@ -244,18 +242,18 @@ p '15.Дан целочисленный массив. Проверить, обр
 p 'arr=[1,4,7,10,13,16,19]'
 arr=[1,4,7,10,13,16,19]
 
-def Task15 arr
-  diffProgression=arr[1]-arr[0]
-  (arr.length-1).times do | i | 
-    if ((arr[i+1]-arr[i]) != diffProgression)
-      diffProgression= nil  
+def Task_15 arr
+  diffProgression=arr[1] - arr[0]
+  (arr.length - 1).times do | i | 
+    if ((arr[i + 1] - arr[i]) != diffProgression)
+      diffProgression = nil  
       break
     end
   end
   puts diffProgression
 end
 
-Task15 arr
+Task_15 arr
 p '----------------------------'
 
 
@@ -263,18 +261,18 @@ p '16. Дан целочисленный массив. Проверить, об�
 p 'arr=[1,3,9,27,81,243,729]'
 arr=[1,3,9,27,81,243,729]
 
-def Task16 arr
-  znamenatelProgresii=arr[1]/arr[0]
-  (arr.length-1).times do | i | 
-    if ((arr[i+1]/arr[i]) != znamenatelProgresii)
-      znamenatelProgresii= nil  
+def Task_16 arr
+  znamenatelProgresii = arr[1] / arr[0]
+  (arr.length - 1).times do | i | 
+    if ((arr[i + 1] / arr[i]) != znamenatelProgresii)
+      znamenatelProgresii = nil  
       break
     end
   end
   puts znamenatelProgresii
 end
 
-Task16 arr
+Task_16 arr
 p '----------------------------'
 
 
@@ -282,17 +280,17 @@ p '17.Дан целочисленный массив. Найти количес�
 p 'arr=[1,11,12,27,81,3,729,576]'
 arr=[1,11,12,27,81,3,729,576]
 
-def Task17 arr
-  countLocalMax=0
-  (arr.length-2).times do | i | 
-    if ((arr[i+1]>arr[i])&&(arr[i+1]>arr[i+2]))
-      countLocalMax= countLocalMax+1  
+def Task_17 arr
+  countLocalMax = 0
+  (arr.length - 2).times do | i | 
+    if ((arr[i + 1]>arr[i])&&(arr[i+  1]>arr[i + 2]))
+      countLocalMax += 1  
     end
   end
   puts countLocalMax
 end
 
- Task17 arr
+ Task_17 arr
 p '----------------------------'
 
 
@@ -300,17 +298,17 @@ p '18.Дан целочисленный массив. Найти количес�
 p 'arr=[1,11,4,27,81,3,729,576]'
 arr=[1,11,4,27,81,3,729,576]
 
-def Task18 arr
-  countLocalMin=0
-  (arr.length-2).times do | i | 
-    if ((arr[i+1]<arr[i])&&(arr[i+1]<arr[i+2]))
-      countLocalMin= countLocalMin+1  
+def Task_18 arr
+  countLocalMin = 0
+  (arr.length - 2).times do | i | 
+    if ((arr[i + 1] < arr[i]) && (arr[i + 1]<arr[i + 2]))
+      countLocalMin += 1  
     end
   end
   puts countLocalMin
 end
 
-Task18 arr
+Task_18 arr
 p '----------------------------'
 
 
@@ -318,17 +316,17 @@ p '19.Дан целочисленный массив. Найти максима�
 p 'arr=[1,11,14,13,81,564,3,576]'
 arr=[1,11,14,13,81,564,3,576]
 
-def Task19 arr
+def Task_19 arr
   arrMax=Array.new
-  (arr.length-2).times do | i | 
-    if ((arr[i+1]>arr[i])&&(arr[i+1]>arr[i+2]))
-      arrMax.push(arr[i+1])  
+  (arr.length - 2).times do | i | 
+    if ((arr[i + 1] > arr[i]) && (arr[i + 1] > arr[i + 2]))
+      arrMax.push(arr[i + 1])  
     end
   end
   puts arrMax.max
 end
 
-Task19 arr
+Task_19 arr
 p '----------------------------'
 
 
@@ -336,17 +334,17 @@ p '20.Дан целочисленный массив. Найти минимал�
 p 'arr=[1,11,14,13,81,564,729,576]'
 arr=[1,11,14,13,81,564,729,576]
 
-def Task20 arr
-  arrMin=Array.new
-  (arr.length-2).times do | i | 
-    if ((arr[i+1]<arr[i])&(arr[i+1]<arr[i+2]))
-      arrMin.push(arr[i+1])  
+def Task_20 arr
+  arrMin = Array.new
+  (arr.length - 2).times do | i | 
+    if ((arr[i + 1] < arr[i]) && (arr[i + 1] < arr[i + 2]))
+      arrMin.push(arr[i + 1])  
     end
   end
   puts arrMin.min
 end
 
-Task20 arr
+Task_20 arr
 p '----------------------------'
   
 
@@ -355,19 +353,19 @@ p 'arr=[1.0,4.0,7.0,10.0,13.5,16.0,4.0], R=45'
 arr=[1.0,4.0,7.0,10.0,13.5,16.0,4.0]
 r=45.0
 
-def Task21 (arr,r)
-  nearestValue=arr[0]
-  diff=(arr[0]-r).abs
+def Task_21 (arr,r)
+  nearestValue = arr[0]
+  diff = (arr[0] - r).abs
   arr.length.times do | i | 
-    if diff>(arr[i]-r).abs
-      diff= (arr[i]-r).abs
-      nearestValue=arr[i]
+    if diff > (arr[i] - r).abs
+      diff = (arr[i] - r).abs
+      nearestValue = arr[i]
     end
   end
   puts nearestValue
 end
 
-Task21(arr,r)
+Task_21(arr,r)
 p '----------------------------'
 
 
@@ -376,19 +374,19 @@ p 'arr=[1.0,4.0,7.0,10.0,13.5,16.0,4.0], R=45'
 arr=[1.0,4.0,7.0,10.0,13.5,16.0,4.0]
 r=45.0
 
-def Task22 (arr,r)
-  nearestValue=arr[0]
-  diff=(arr[0]-r).abs
+def Task_22 (arr,r)
+  nearestValue = arr[0]
+  diff = (arr[0] - r).abs
   arr.length.times do | i | 
-    if diff<(arr[i]-r).abs
-       diff= (arr[i]-r).abs
-       nearestValue=arr[i]
+    if diff < (arr[i] - r).abs
+       diff = (arr[i] - r).abs
+       nearestValue = arr[i]
     end
   end
   puts nearestValue
 end
 
-Task22(arr,r)
+Task_22(arr,r)
 p '----------------------------'
 
 
@@ -396,21 +394,21 @@ p ' 23.Дан целочисленный массив. Преобразоват�
 p 'arr=[1,52,-6,49,99,27]'
 arr=[1,52,-6,49,99,27]
 
-def Task23 (arr)
-  count_shift=0
-  arr1=arr.map{ |elem| elem = elem }
-  arr2=arr.map{ |elem| elem = elem }
-  arr1.length.times do | i | 
-    if (arr1[i]>0)
-      arr2.insert((i+count_shift), 0) 
-      count_shift=count_shift+1 
+def Task_23 (arr)
+  count_shift = 0
+  arr_1 = arr.map{ |elem| elem = elem }
+  arr_2 = arr.map{ |elem| elem = elem }
+  arr_1.length.times do | i | 
+    if (arr_1[i] > 0)
+      arr_2.insert((i + count_shift), 0) 
+      count_shift += 1 
      end
     end
-  print arr2
+  print arr_2
   puts
 end
 
-Task23 (arr)
+Task_23 (arr)
 p '----------------------------'
 
 
@@ -418,21 +416,21 @@ p '24.Дан целочисленный массив. Преобразовать
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task24(arr)
- count_shift=0
-   arr1=arr.map{ |elem| elem = elem }
-   arr2=arr.map{ |elem| elem = elem }
-   arr1.length.times do | i | 
-      if (arr1[i]<0)
-         arr2.insert((i+count_shift), 0) 
-         count_shift=count_shift+1 
+def Task_24(arr)
+ count_shift = 0
+   arr_1 = arr.map{ |elem| elem = elem }
+   arr_2 = arr.map{ |elem| elem = elem }
+   arr_1.length.times do | i | 
+      if (arr_1[i] < 0)
+         arr_2.insert((i + count_shift), 0) 
+         count_shift += 1 
       end
      end
-  print arr2
+  print arr_2
   puts
 end
 
-Task24 (arr)
+Task_24 (arr)
 p '----------------------------'
 
 
@@ -440,21 +438,21 @@ p '25.Дан целочисленный массив. Преобразовать
 p 'arr=[1,52,-6,49,99,27]'
 arr=[1,52,-6,49,99,27]
 
-def Task25 (arr)
-  count_shift=1
-  arr1=arr.map{ |elem| elem = elem }
-  arr2=arr.map{ |elem| elem = elem }
-    arr1.length.times do | i | 
-      if (arr1[i]>0)
-        arr2.insert((i+count_shift), 0) 
-        count_shift=count_shift+1 
+def Task_25 (arr)
+  count_shift = 1
+  arr_1 = arr.map{ |elem| elem = elem }
+  arr_2 = arr.map{ |elem| elem = elem }
+    arr_1.length.times do | i | 
+      if (arr_1[i] > 0)
+        arr_2.insert((i + count_shift), 0) 
+        count_shift += 1 
       end
     end
-  print arr2
+  print arr_2
   puts
 end
 
-Task25 (arr)
+Task_25 (arr)
 p '----------------------------'
 
 
@@ -462,21 +460,21 @@ p '26.Дан целочисленный массив. Преобразовать
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task26(arr)
-  count_shift=1
-  arr1=arr.map{ |elem| elem = elem }
-  arr2=arr.map{ |elem| elem = elem }
-    arr1.length.times do | i | 
-      if (arr1[i]<0)
-        arr2.insert((i+count_shift), 0) 
-        count_shift=count_shift+1 
+def Task_26(arr)
+  count_shift = 1
+  arr_1=arr.map{ |elem| elem = elem }
+  arr_2=arr.map{ |elem| elem = elem }
+    arr_1.length.times do | i | 
+      if (arr_1[i] < 0)
+        arr_2.insert((i + count_shift), 0) 
+        count_shift += 1 
       end
     end
-  print arr2
+  print arr_2
   puts
 end
 
-Task26 (arr)
+Task_26 (arr)
 p '----------------------------'
 
 
@@ -484,11 +482,11 @@ p '27.Дан целочисленный массив. Упорядочить е�
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task27(arr)
+def Task_27(arr)
   print arr.sort
 end
 
-Task27(arr)
+Task_27(arr)
 puts
 p '----------------------------'
 
@@ -497,11 +495,11 @@ p '28.Дан целочисленный массив. Упорядочить е�
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task28(arr)
+def Task_28(arr)
   print arr.sort.reverse
 end
 
-Task28(arr)
+Task_28(arr)
 puts
 p '----------------------------'
 
@@ -510,11 +508,11 @@ p '29.Дан целочисленный массив. Вывести индек�
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task29(arr)
+def Task_29(arr)
   print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }
 end
 
-Task29(arr)
+Task_29(arr)
 puts
 p '----------------------------'
 
@@ -523,11 +521,11 @@ p '30.Дан целочисленный массив. Вывести индек�
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task30(arr)
+def Task_30(arr)
   print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }
 end
 
-Task30(arr)
+Task_30(arr)
 puts
 p '----------------------------'
 
@@ -536,11 +534,11 @@ p '31.Дан целочисленный массив. Найти индекс м
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task31 (arr)
+def Task_31 (arr)
   puts arr.index(arr.min)
 end
 
-Task31 (arr)
+Task_31 (arr)
 p '----------------------------'
 
 
@@ -548,11 +546,11 @@ p '32.Дан целочисленный массив. Найти индекс м
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task32 (arr)
+def Task_32 (arr)
   puts arr.index(arr.max)
 end
 
-Task32 (arr)
+Task_32 (arr)
 p '----------------------------'
 
 
@@ -560,11 +558,11 @@ p '33.Дан целочисленный массив. Найти индекс п
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
-def Task33 (arr)
+def Task_33 (arr)
   print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
 end
 
-Task33 (arr)
+Task_33 (arr)
 puts
 p '----------------------------'
 
@@ -573,11 +571,11 @@ p '34.Дан целочисленный массив. Найти индекс п
 p 'arr=[1,52,-6,49,-99,52]'
 arr=[1,52,-6,49,-99,52]
 
-def Task34 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first
+def Task_34 (arr)
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first
 end
 
-Task34 (arr)
+Task_34 (arr)
 puts
 p '----------------------------'
 
@@ -586,11 +584,11 @@ p '35.Дан целочисленный массив. Найти индекс п
 p 'arr=[1,52,-6,49,-99,-99]'
 arr=[1,52,-6,49,-99,-99]
 
-def Task35 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.last
+def Task_35 (arr)
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.last
 end
 
-Task35 (arr)
+Task_35 (arr)
 puts
 p '----------------------------'
 
@@ -599,11 +597,11 @@ p '36.Дан целочисленный массив. Найти индекс п
 p 'arr=[1,99,-6,49,99,1]'
 arr=[1,99,-6,49,99,1]
 
-def Task36 (arr)
+def Task_36 (arr)
   print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
 end
 
-Task36 (arr)
+Task_36 (arr)
 puts
 p '----------------------------'
 
@@ -612,11 +610,11 @@ p '37.Дан целочисленный массив. Найти количес�
 p 'arr = [1, 2, 3, 1, 1, 6, 7, 8]'
 arr = [1, 2, 3, 1, 1, 6, 7, 8]
 
-def Task37 (arr)
-  p arr.select{ |i| arr.min==i }.size
+def Task_37 (arr)
+  p arr.select{ |i| arr.min == i }.size
 end
 
-Task37 (arr)
+Task_37 (arr)
 p '----------------------------'
 
 
@@ -624,11 +622,11 @@ p '38.Дан целочисленный массив. Найти количес�
 p 'arr = [8, 8, 3, 8, 6, 6, 7, 8]'
 arr = [8, 8, 3, 8, 6, 6, 7, 8]
 
-def Task38 (arr)
-  p arr.select{ |i| arr.max==i }.size
+def Task_38 (arr)
+  p arr.select{ |i| arr.max == i }.size
 end
 
-Task38 (arr)
+Task_38 (arr)
 p '----------------------------'
 
 
@@ -636,11 +634,11 @@ p '39.Дан целочисленный массив. Найти минимал�
 p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
-def Task39 (arr)
+def Task_39 (arr)
   p arr.select{ |el| el.even? }.min
 end
 
-Task39 (arr)
+Task_39 (arr)
 p '----------------------------'
 
 
@@ -648,11 +646,11 @@ p '40 Дан целочисленный массив. Найти минимал�
 p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
-def Task40 (arr)
+def Task_40 (arr)
   p arr.select{ |el| el.odd? }.min
 end
 
-Task40 (arr)  
+Task_40 (arr)  
 p '----------------------------'
 
 
@@ -660,11 +658,11 @@ p '41.Дан целочисленный массив. Найти максима�
 p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
-def Task41 (arr)
+def Task_41 (arr)
   p arr.select{ |el| el.even? }.max
 end
 
-Task41 (arr)  
+Task_41 (arr)  
 p '----------------------------'
 
 
@@ -672,11 +670,11 @@ p '42.Дан целочисленный массив. Найти максима�
 p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
-def Task42 (arr) 
+def Task_42 (arr) 
   p arr.select{ |el| el.odd? }.max
 end
 
-Task42 (arr)  
+Task_42 (arr)  
 p '----------------------------'
 
 
@@ -684,11 +682,11 @@ p '43.Дан целочисленный массив. Найти минимал�
 p ' [21, -2, 3, -14, 61, 5, 74, 9]'
 arr = [21, -2, 3, -14, 61, 5, 74, 9]
 
-def Task43 (arr)  
-  p arr.select{ |el| el>0}.min
+def Task_43 (arr)  
+  p arr.select{ |el| el > 0}.min
 end
 
-Task43 (arr)    
+Task_43 (arr)    
 p '----------------------------'
 
 
@@ -696,11 +694,11 @@ p '44.Дан целочисленный массив. Найти максима�
 p ' [21, -2, 3, -14, 61, 5, 74, 9]'
 arr = [21, -2, 3, -14, 61, 5, 74, 9]
 
-def Task44 (arr) 
-  p arr.select{ |el| el<0}.max
+def Task_44 (arr) 
+  p arr.select{ |el| el < 0}.max
 end
 
-Task44 (arr)  
+Task_44 (arr)  
 p '----------------------------'
 
 
@@ -708,11 +706,11 @@ p '45.Дан целочисленный массив. Найти количес�
 p 'arr=[1,52,-6,49,-99,-99]'
 arr=[4,52,-6,1,-99,-99]
 
-def Task45 (arr)
+def Task_45 (arr)
   print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
 end
 
-Task45 (arr) 
+Task_45 (arr) 
 puts
 p '----------------------------'
 
@@ -721,11 +719,11 @@ p '46.Дан целочисленный массив. Найти количес�
 p 'arr=[1,52,-6,49,99,99]'
 arr=[4,52,-6,1,99,99]
 
-def Task46 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first
+def Task_46 (arr)
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first
 end
 
-Task46 (arr)
+Task_46 (arr)
   puts
 p '----------------------------'
 
@@ -734,11 +732,11 @@ p '47.Дан целочисленный массив. Найти количес�
 p 'arr=[1,99,-6,49,99,99]'
 arr=[4,99,-6,1,99,99]
 
-def Task47 (arr)
-  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first-1
+def Task_47 (arr)
+  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first - 1
 end
 
-Task47 (arr)
+Task_47 (arr)
 puts
 p '----------------------------'
 
@@ -747,11 +745,11 @@ p '48.Дан целочисленный массив. Найти количес�
 p 'arr=[4,-99,-6,1,-99,99]'
 arr=[4,-99,-6,1,-99,99]
 
-def Task48 (arr)
-  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first-1
+def Task_48 (arr)
+  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first - 1
 end
 
-Task48 (arr) 
+Task_48 (arr) 
 puts
 p '----------------------------'
 
@@ -760,11 +758,11 @@ p '49 Дан целочисленный массив. Найти количес�
 p 'arr=[4,52,-6,99,99,4]'
 arr=[4,52,-6,99,99,4]
 
-def Task49 (arr)
+def Task_49 (arr)
   print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
 end
 
-Task49 (arr) 
+Task_49 (arr) 
 puts
 p '----------------------------'
 
@@ -773,9 +771,9 @@ p '50 Дан целочисленный массив. Найти количес�
 p 'arr=[4,52,-6,-99,-99,4]'
 arr=[4,52,-6,-99,-99,4]
 
-def Task50 (arr)
-  print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.last
+def Task_50 (arr)
+  print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.last
 end
-Task50 (arr) 
+Task_50 (arr) 
 puts
 p '----------------------------'
