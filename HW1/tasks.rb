@@ -2,18 +2,18 @@ p '1. Дан целочисленный массив. Необходимо вы�
 p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
-def ChetNechet (arr, number)
+def OddOrEven (arr, number)
   if number%2>0
    arr.each_index {|x| puts arr[x] if x%2>0}
   end
   if number%2==0
    arr.each_index {|x| puts arr[x] if (x)%2==0}
   end
-  puts
-end
+ end
 
-ChetNechet(arr,0)
-ChetNechet(arr,1)
+OddOrEven(arr,0)
+puts
+OddOrEven(arr,1)
 p '----------------------------'
 
 
@@ -21,18 +21,19 @@ p '2 Дан целочисленный массив. Необходимо выв
 p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
-def ChetNechet (arr, number)
+def OddOrEven (arr, number)
   if number%2>0
-  	arr.each_index {|x| puts arr[x] if x %2>0}
+   arr.each_index {|x| puts arr[x] if x%2>0}
   end
   if number%2==0
-  	arr.each_index {|x| puts arr[x] if (x)%2==0}
+   arr.each_index {|x| puts arr[x] if (x)%2==0}
   end
-  puts
-end
+ end
 
-ChetNechet(arr,1)
-ChetNechet(arr,0)
+OddOrEven(arr,1)
+puts
+OddOrEven(arr,0)
+p '----------------------------'
 p '-----------------------------'
 
 
