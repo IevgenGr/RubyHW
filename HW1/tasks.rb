@@ -42,7 +42,7 @@ arr=[1,52,6,49,23,2,12]
 
 def Task3 arr
  arr.length.times do | i | 
-  if (arr[0] < arr[i])&&(arr[i] < arr[-1])
+  if (arr[0]<arr[i])&&(arr[i]<arr[-1])
    @indexFirstElement=i
    break
   end
@@ -60,7 +60,7 @@ arr=[1,52,6,49,23,30,27]
 
 def Task4 arr
  arr.length.times do | i | 
-   if (arr[0] < arr[i])&&(arr[i]< arr[-1])
+   if (arr[0]<arr[i])&&(arr[i]<arr[-1])
     @indexLastElement=i
    end
 end
