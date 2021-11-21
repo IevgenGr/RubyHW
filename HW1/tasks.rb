@@ -95,7 +95,7 @@ arr=[1,52,6,49,23,30,28]
 
 def Task6 arr
  arr.length.times do | i | 
-   if (arr[i]%2==0)&(i != 0)&&(i != (arr.length-1))
+   if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
     arr[i]=arr[i]+arr[arr.length-1]
    end
  end
