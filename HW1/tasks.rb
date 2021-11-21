@@ -4,10 +4,10 @@ arr=[1,5,6,45,23,2,47]
 
 def OddOrEven (arr, number)
   if number%2>0
-   arr.each_index {|x| puts arr[x] if x%2>0}
+    arr.each_index {|x| puts arr[x] if x%2>0}
   end
   if number%2==0
-   arr.each_index {|x| puts arr[x] if (x)%2==0}
+    arr.each_index {|x| puts arr[x] if (x)%2==0}
   end
  end
 
@@ -23,10 +23,10 @@ arr=[1,5,6,45,23,2,47]
 
 def OddOrEven (arr, number)
   if number%2>0
-   arr.each_index {|x| puts arr[x] if x%2>0}
+    arr.each_index {|x| puts arr[x] if x%2>0}
   end
   if number%2==0
-   arr.each_index {|x| puts arr[x] if (x)%2==0}
+    arr.each_index {|x| puts arr[x] if (x)%2==0}
   end
  end
 
@@ -41,13 +41,13 @@ p 'arr=[1,52,6,49,23,2,12]'
 arr=[1,52,6,49,23,2,12]
 
 def Task3 arr
- arr.length.times do | i | 
-  if (arr[0]<arr[i])&&(arr[i]<arr[-1])
-   @indexFirstElement=i
-   break
+  arr.length.times do | i | 
+   if (arr[0]<arr[i])&&(arr[i]<arr[-1])
+     @indexFirstElement=i
+     break
+   end
   end
- end
- p @indexFirstElement
+  p @indexFirstElement
 end
 
 Task3 arr
@@ -59,11 +59,11 @@ p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
 def Task4 arr
- arr.length.times do | i | 
-   if (arr[0]<arr[i])&&(arr[i]<arr[-1])
-    @indexLastElement=i
-   end
-end
+  arr.length.times do | i | 
+    if (arr[0]<arr[i])&&(arr[i]<arr[-1])
+     @indexLastElement=i
+    end
+ end
   
 p @indexLastElement
 end
@@ -77,12 +77,12 @@ p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
 def Task5 arr
- arr.length.times do | i | 
-   if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
-    arr[i]=arr[i]+arr[0]
-   end
- end
- p arr
+  arr.length.times do | i | 
+    if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
+      arr[i]=arr[i]+arr[0]
+    end
+  end
+  p arr
 end
 
 Task5 arr
@@ -94,12 +94,12 @@ p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
 def Task6 arr
- arr.length.times do | i | 
-   if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
-    arr[i]=arr[i]+arr[arr.length-1]
-   end
- end
- p arr
+  arr.length.times do | i | 
+    if (arr[i]%2==0)&&(i != 0)&&(i != (arr.length-1))
+      arr[i]=arr[i]+arr[arr.length-1]
+    end
+  end
+  p arr
 end
 
 Task6 arr
@@ -111,12 +111,12 @@ p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
 def Task7 arr
- arr.length.times do | i | 
-   if (arr[i]%2>0)&&(i != 0)&&(i != (arr.length-1))
-    arr[i]=arr[i]+arr[arr.length-1]
-   end
- end
-p arr
+  arr.length.times do | i | 
+    if (arr[i]%2>0)&&(i != 0)&&(i != (arr.length-1))
+      arr[i]=arr[i]+arr[arr.length-1]
+    end
+  end
+ p arr
 end
 
 Task7 arr
@@ -128,12 +128,12 @@ p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
 def Task8 arr
- arr.length.times do | i | 
-   if (arr[i]%2>0)&&(i != 0)&&(i != (arr.length-1))
-    arr[i]=arr[i]+arr[0]
-   end
- end
- p arr
+  arr.length.times do | i | 
+    if (arr[i]%2>0)&&(i != 0)&&(i != (arr.length-1))
+      arr[i]=arr[i]+arr[0]
+    end
+  end
+  p arr
 end
 
 Task8 arr
@@ -145,12 +145,12 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task9 arr
- arr.length.times do | i | 
-   if (arr[i]>0)
-    arr[i]=arr.min
-   end
- end
-print arr
+  arr.length.times do | i | 
+    if (arr[i]>0)
+      arr[i]=arr.min
+    end
+  end
+  print arr
 end
 
 Task9 arr
@@ -163,12 +163,12 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task10 arr
- arr.length.times do | i | 
-   if (arr[i]>0)
-    arr[i]=arr.max
-   end
- end
- print arr 
+  arr.length.times do | i | 
+    if (arr[i]>0)
+      arr[i]=arr.max
+    end
+  end
+  print arr 
 end
 
 Task10 arr
@@ -181,12 +181,12 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task11 arr
- arr.length.times do | i | 
-   if (arr[i]<0)
-    arr[i]=arr.min
-   end
- end
- print arr
+  arr.length.times do | i | 
+    if (arr[i]<0)
+      arr[i]=arr.min
+    end
+  end
+  print arr
 end
 
 Task11 arr
@@ -201,10 +201,10 @@ arr=[1,52,-6,49,-23,30,27]
 def Task12 arr
   arr.length.times do | i | 
     if (arr[i]<0)
-     arr[i]=arr.max
+      arr[i]=arr.max
     end
- end
- print arr
+  end
+  print arr
 end
 
 Task12 arr
@@ -217,8 +217,8 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task13 arr
- arr=arr.rotate
- print arr
+  arr=arr.rotate
+  print arr
 end 
 
 Task13 arr
@@ -231,8 +231,8 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task14 arr
- arr=arr.rotate(-1)
- print arr
+  arr=arr.rotate(-1)
+  print arr
 end
 
 Task14 arr
@@ -245,14 +245,14 @@ p 'arr=[1,4,7,10,13,16,19]'
 arr=[1,4,7,10,13,16,19]
 
 def Task15 arr
- diffProgression=arr[1]-arr[0]
- (arr.length-1).times do | i | 
-   if ((arr[i+1]-arr[i]) != diffProgression)
-    diffProgression= nil  
-   break
-   end
- end
- puts diffProgression
+  diffProgression=arr[1]-arr[0]
+  (arr.length-1).times do | i | 
+    if ((arr[i+1]-arr[i]) != diffProgression)
+      diffProgression= nil  
+      break
+    end
+  end
+  puts diffProgression
 end
 
 Task15 arr
@@ -264,14 +264,14 @@ p 'arr=[1,3,9,27,81,243,729]'
 arr=[1,3,9,27,81,243,729]
 
 def Task16 arr
-znamenatelProgresii=arr[1]/arr[0]
- (arr.length-1).times do | i | 
-   if ((arr[i+1]/arr[i]) != znamenatelProgresii)
-    znamenatelProgresii= nil  
-    break
-   end
- end
- puts znamenatelProgresii
+  znamenatelProgresii=arr[1]/arr[0]
+  (arr.length-1).times do | i | 
+    if ((arr[i+1]/arr[i]) != znamenatelProgresii)
+      znamenatelProgresii= nil  
+      break
+    end
+  end
+  puts znamenatelProgresii
 end
 
 Task16 arr
@@ -283,13 +283,13 @@ p 'arr=[1,11,12,27,81,3,729,576]'
 arr=[1,11,12,27,81,3,729,576]
 
 def Task17 arr
- countLocalMax=0
- (arr.length-2).times do | i | 
-   if ((arr[i+1]>arr[i])&&(arr[i+1]>arr[i+2]))
-    countLocalMax= countLocalMax+1  
-   end
- end
- puts countLocalMax
+  countLocalMax=0
+  (arr.length-2).times do | i | 
+    if ((arr[i+1]>arr[i])&&(arr[i+1]>arr[i+2]))
+      countLocalMax= countLocalMax+1  
+    end
+  end
+  puts countLocalMax
 end
 
  Task17 arr
@@ -301,13 +301,13 @@ p 'arr=[1,11,4,27,81,3,729,576]'
 arr=[1,11,4,27,81,3,729,576]
 
 def Task18 arr
- countLocalMin=0
- (arr.length-2).times do | i | 
-   if ((arr[i+1]<arr[i])&&(arr[i+1]<arr[i+2]))
-    countLocalMin= countLocalMin+1  
-   end
- end
- puts countLocalMin
+  countLocalMin=0
+  (arr.length-2).times do | i | 
+    if ((arr[i+1]<arr[i])&&(arr[i+1]<arr[i+2]))
+      countLocalMin= countLocalMin+1  
+    end
+  end
+  puts countLocalMin
 end
 
 Task18 arr
@@ -319,13 +319,13 @@ p 'arr=[1,11,14,13,81,564,3,576]'
 arr=[1,11,14,13,81,564,3,576]
 
 def Task19 arr
- arrMax=Array.new
- (arr.length-2).times do | i | 
-   if ((arr[i+1]>arr[i])&&(arr[i+1]>arr[i+2]))
-    arrMax.push(arr[i+1])  
-   end
- end
- puts arrMax.max
+  arrMax=Array.new
+  (arr.length-2).times do | i | 
+    if ((arr[i+1]>arr[i])&&(arr[i+1]>arr[i+2]))
+      arrMax.push(arr[i+1])  
+    end
+  end
+  puts arrMax.max
 end
 
 Task19 arr
@@ -337,13 +337,13 @@ p 'arr=[1,11,14,13,81,564,729,576]'
 arr=[1,11,14,13,81,564,729,576]
 
 def Task20 arr
- arrMin=Array.new
- (arr.length-2).times do | i | 
-   if ((arr[i+1]<arr[i])&(arr[i+1]<arr[i+2]))
-    arrMin.push(arr[i+1])  
-   end
- end
- puts arrMin.min
+  arrMin=Array.new
+  (arr.length-2).times do | i | 
+    if ((arr[i+1]<arr[i])&(arr[i+1]<arr[i+2]))
+      arrMin.push(arr[i+1])  
+    end
+  end
+  puts arrMin.min
 end
 
 Task20 arr
@@ -356,15 +356,15 @@ arr=[1.0,4.0,7.0,10.0,13.5,16.0,4.0]
 r=45.0
 
 def Task21 (arr,r)
- nearestValue=arr[0]
- diff=(arr[0]-r).abs
+  nearestValue=arr[0]
+  diff=(arr[0]-r).abs
   arr.length.times do | i | 
     if diff>(arr[i]-r).abs
-     diff= (arr[i]-r).abs
-     nearestValue=arr[i]
+      diff= (arr[i]-r).abs
+      nearestValue=arr[i]
     end
- end
- puts nearestValue
+  end
+  puts nearestValue
 end
 
 Task21(arr,r)
@@ -377,15 +377,15 @@ arr=[1.0,4.0,7.0,10.0,13.5,16.0,4.0]
 r=45.0
 
 def Task22 (arr,r)
- nearestValue=arr[0]
- diff=(arr[0]-r).abs
+  nearestValue=arr[0]
+  diff=(arr[0]-r).abs
   arr.length.times do | i | 
     if diff<(arr[i]-r).abs
-     diff= (arr[i]-r).abs
-     nearestValue=arr[i]
+       diff= (arr[i]-r).abs
+       nearestValue=arr[i]
     end
   end
- puts nearestValue
+  puts nearestValue
 end
 
 Task22(arr,r)
@@ -397,17 +397,17 @@ p 'arr=[1,52,-6,49,99,27]'
 arr=[1,52,-6,49,99,27]
 
 def Task23 (arr)
- count_shift=0
- arr1=arr.map{ |elem| elem = elem }
- arr2=arr.map{ |elem| elem = elem }
-   arr1.length.times do | i | 
+  count_shift=0
+  arr1=arr.map{ |elem| elem = elem }
+  arr2=arr.map{ |elem| elem = elem }
+  arr1.length.times do | i | 
     if (arr1[i]>0)
-     arr2.insert((i+count_shift), 0) 
-     count_shift=count_shift+1 
+      arr2.insert((i+count_shift), 0) 
+      count_shift=count_shift+1 
+     end
     end
-   end
- print arr2
- puts
+  print arr2
+  puts
 end
 
 Task23 (arr)
@@ -420,16 +420,16 @@ arr=[1,52,-6,49,-99,27]
 
 def Task24(arr)
  count_shift=0
-  arr1=arr.map{ |elem| elem = elem }
-  arr2=arr.map{ |elem| elem = elem }
-    arr1.length.times do | i | 
+   arr1=arr.map{ |elem| elem = elem }
+   arr2=arr.map{ |elem| elem = elem }
+   arr1.length.times do | i | 
       if (arr1[i]<0)
-       arr2.insert((i+count_shift), 0) 
-       count_shift=count_shift+1 
+         arr2.insert((i+count_shift), 0) 
+         count_shift=count_shift+1 
       end
-    end
- print arr2
- puts
+     end
+  print arr2
+  puts
 end
 
 Task24 (arr)
@@ -441,17 +441,17 @@ p 'arr=[1,52,-6,49,99,27]'
 arr=[1,52,-6,49,99,27]
 
 def Task25 (arr)
- count_shift=1
- arr1=arr.map{ |elem| elem = elem }
- arr2=arr.map{ |elem| elem = elem }
-   arr1.length.times do | i | 
-     if (arr1[i]>0)
-      arr2.insert((i+count_shift), 0) 
-      count_shift=count_shift+1 
-     end
-   end
- print arr2
- puts
+  count_shift=1
+  arr1=arr.map{ |elem| elem = elem }
+  arr2=arr.map{ |elem| elem = elem }
+    arr1.length.times do | i | 
+      if (arr1[i]>0)
+        arr2.insert((i+count_shift), 0) 
+        count_shift=count_shift+1 
+      end
+    end
+  print arr2
+  puts
 end
 
 Task25 (arr)
@@ -463,17 +463,17 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task26(arr)
- count_shift=1
- arr1=arr.map{ |elem| elem = elem }
- arr2=arr.map{ |elem| elem = elem }
-   arr1.length.times do | i | 
-     if (arr1[i]<0)
-      arr2.insert((i+count_shift), 0) 
-      count_shift=count_shift+1 
-     end
-   end
- print arr2
- puts
+  count_shift=1
+  arr1=arr.map{ |elem| elem = elem }
+  arr2=arr.map{ |elem| elem = elem }
+    arr1.length.times do | i | 
+      if (arr1[i]<0)
+        arr2.insert((i+count_shift), 0) 
+        count_shift=count_shift+1 
+      end
+    end
+  print arr2
+  puts
 end
 
 Task26 (arr)
@@ -485,7 +485,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task27(arr)
- print arr.sort
+  print arr.sort
 end
 
 Task27(arr)
@@ -498,7 +498,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task28(arr)
- print arr.sort.reverse
+  print arr.sort.reverse
 end
 
 Task28(arr)
@@ -508,10 +508,10 @@ p '----------------------------'
 
 p '29.Дан целочисленный массив. Вывести индексы массива в том порядке, в котором соответствующие им элементы образуют убывающую последовательность. '
 p 'arr=[1,52,-6,49,-99,27]'
-
 arr=[1,52,-6,49,-99,27]
+
 def Task29(arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }
 end
 
 Task29(arr)
@@ -524,7 +524,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task30(arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }
 end
 
 Task30(arr)
@@ -537,7 +537,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task31 (arr)
- puts arr.index(arr.min)
+  puts arr.index(arr.min)
 end
 
 Task31 (arr)
@@ -549,7 +549,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task32 (arr)
- puts arr.index(arr.max)
+  puts arr.index(arr.max)
 end
 
 Task32 (arr)
@@ -561,7 +561,7 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task33 (arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
 end
 
 Task33 (arr)
@@ -574,7 +574,7 @@ p 'arr=[1,52,-6,49,-99,52]'
 arr=[1,52,-6,49,-99,52]
 
 def Task34 (arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first
 end
 
 Task34 (arr)
@@ -587,7 +587,7 @@ p 'arr=[1,52,-6,49,-99,-99]'
 arr=[1,52,-6,49,-99,-99]
 
 def Task35 (arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.last
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.last
 end
 
 Task35 (arr)
@@ -600,7 +600,7 @@ p 'arr=[1,99,-6,49,99,1]'
 arr=[1,99,-6,49,99,1]
 
 def Task36 (arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
 end
 
 Task36 (arr)
@@ -613,7 +613,7 @@ p 'arr = [1, 2, 3, 1, 1, 6, 7, 8]'
 arr = [1, 2, 3, 1, 1, 6, 7, 8]
 
 def Task37 (arr)
- p arr.select{ |i| arr.min==i }.size
+  p arr.select{ |i| arr.min==i }.size
 end
 
 Task37 (arr)
@@ -625,7 +625,7 @@ p 'arr = [8, 8, 3, 8, 6, 6, 7, 8]'
 arr = [8, 8, 3, 8, 6, 6, 7, 8]
 
 def Task38 (arr)
- p arr.select{ |i| arr.max==i }.size
+  p arr.select{ |i| arr.max==i }.size
 end
 
 Task38 (arr)
@@ -637,7 +637,7 @@ p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
 def Task39 (arr)
- p arr.select{ |el| el.even? }.min
+  p arr.select{ |el| el.even? }.min
 end
 
 Task39 (arr)
@@ -649,7 +649,7 @@ p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
 def Task40 (arr)
- p arr.select{ |el| el.odd? }.min
+  p arr.select{ |el| el.odd? }.min
 end
 
 Task40 (arr)  
@@ -661,7 +661,7 @@ p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
 def Task41 (arr)
- p arr.select{ |el| el.even? }.max
+  p arr.select{ |el| el.even? }.max
 end
 
 Task41 (arr)  
@@ -673,7 +673,7 @@ p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
 def Task42 (arr) 
- p arr.select{ |el| el.odd? }.max
+  p arr.select{ |el| el.odd? }.max
 end
 
 Task42 (arr)  
@@ -685,7 +685,7 @@ p ' [21, -2, 3, -14, 61, 5, 74, 9]'
 arr = [21, -2, 3, -14, 61, 5, 74, 9]
 
 def Task43 (arr)  
- p arr.select{ |el| el>0}.min
+  p arr.select{ |el| el>0}.min
 end
 
 Task43 (arr)    
@@ -697,7 +697,7 @@ p ' [21, -2, 3, -14, 61, 5, 74, 9]'
 arr = [21, -2, 3, -14, 61, 5, 74, 9]
 
 def Task44 (arr) 
- p arr.select{ |el| el<0}.max
+  p arr.select{ |el| el<0}.max
 end
 
 Task44 (arr)  
@@ -709,7 +709,7 @@ p 'arr=[1,52,-6,49,-99,-99]'
 arr=[4,52,-6,1,-99,-99]
 
 def Task45 (arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
 end
 
 Task45 (arr) 
@@ -722,7 +722,7 @@ p 'arr=[1,52,-6,49,99,99]'
 arr=[4,52,-6,1,99,99]
 
 def Task46 (arr)
- print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first
+  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first
 end
 
 Task46 (arr)
@@ -735,7 +735,7 @@ p 'arr=[1,99,-6,49,99,99]'
 arr=[4,99,-6,1,99,99]
 
 def Task47 (arr)
- print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first-1
+  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.first-1
 end
 
 Task47 (arr)
@@ -748,7 +748,7 @@ p 'arr=[4,-99,-6,1,-99,99]'
 arr=[4,-99,-6,1,-99,99]
 
 def Task48 (arr)
- print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first-1
+  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first-1
 end
 
 Task48 (arr) 
@@ -761,7 +761,7 @@ p 'arr=[4,52,-6,99,99,4]'
 arr=[4,52,-6,99,99,4]
 
 def Task49 (arr)
- print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
+  print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
 end
 
 Task49 (arr) 
@@ -774,7 +774,7 @@ p 'arr=[4,52,-6,-99,-99,4]'
 arr=[4,52,-6,-99,-99,4]
 
 def Task50 (arr)
- print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.last
+  print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }.last
 end
 Task50 (arr) 
 puts
