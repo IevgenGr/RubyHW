@@ -45,9 +45,9 @@ def Task3 arr
   if (arr[0] < arr[i])&&(arr[i] < arr[-1])
    @indexFirstElement=i
    break
+  end
  end
-end
-p @indexFirstElement
+ p @indexFirstElement
 end
 
 Task3 arr
