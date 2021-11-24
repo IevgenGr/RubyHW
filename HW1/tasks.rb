@@ -2,37 +2,22 @@ p '1. Дан целочисленный массив. Необходимо вы�
 p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
-def OddOrEven (arr, number)
-  if number % 2 > 0
-    arr.each_index {|x| puts arr[x] if x % 2 > 0}
-  end
-  if number % 2 == 0
-    arr.each_index {|x| puts arr[x] if (x) % 2 == 0}
-  end
- end
+def Odd arr
+ p arr.partition.with_index { |a, index| index.odd? }.flatten
+end
 
-OddOrEven(arr,0)
-puts
-OddOrEven(arr,1)
+Odd(arr)
 p '----------------------------'
 
-
-p '2 Дан целочисленный массив. Необходимо вывести вначале его элементы с нечетными индексами, а затем - четными.'	
+p '2 Дан целочисленный массив. Необходимо вывести вначале его элементы с нечетными индексами, а затем - четными.'   
 p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
-def OddOrEven (arr, number)
-  if number % 2 > 0
-    arr.each_index {|x| puts arr[x] if x % 2 > 0}
-  end
-  if number % 2 == 0
-    arr.each_index {|x| puts arr[x] if (x) % 2 == 0}
-  end
- end
+def Odd arr
+ p arr.partition.with_index { |a, index| index.odd? }.flatten
+end
 
-OddOrEven(arr,1)
-puts
-OddOrEven(arr,0)
+Even(arr)
 p '----------------------------'
 
 
@@ -41,13 +26,7 @@ p 'arr=[1,52,6,49,23,2,12]'
 arr=[1,52,6,49,23,2,12]
 
 def Task_3 arr
-  arr.length.times do | i | 
-   if (arr[0] < arr[i]) && (arr[i] < arr[-1])
-     @indexFirstElement = i
-     break
-   end
-  end
-  p @indexFirstElement
+  p arr.index { |element| arr[0] < element && element < arr[-1] } || []
 end
 
 Task_3 arr
@@ -59,11 +38,8 @@ p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
 def Task_4 arr
-  arr.length.times do | i | 
-    if (arr[0] < arr[i]) && (arr[i] < arr[-1])
-     @indexLastElement = i
-    end
- end
+  p arr.index { |element| arr[0] < element && element < arr[-1] } || []
+end
   
 p @indexLastElement
 end
