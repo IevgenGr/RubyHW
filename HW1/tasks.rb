@@ -2,22 +2,26 @@ p '1. Дан целочисленный массив. Необходимо вы�
 p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
-def Odd arr
- p arr.partition.with_index { |a, index| index.odd? }.flatten
+def Task_1 arr
+  p arr.select.with_index { |a, index| index.odd? }.concat arr.select.with_index { |a, index| index.even? }
 end
 
-Odd(arr)
+end
+
+Task_1 (arr)
 p '----------------------------'
 
 p '2 Дан целочисленный массив. Необходимо вывести вначале его элементы с нечетными индексами, а затем - четными.'   
 p 'arr=[1,5,6,45,23,2,47]'
 arr=[1,5,6,45,23,2,47]
 
-def Odd arr
- p arr.partition.with_index { |a, index| index.odd? }.flatten
+def Task_2  arr
+  p arr.select.with_index { |a, index| index.even? }.concat arr.select.with_index { |a, index| index.odd? }
 end
 
-Even(arr)
+end
+
+Task_2(arr)
 p '----------------------------'
 
 
@@ -47,18 +51,12 @@ end
 Task_4 arr
 p '----------------------------'
 
-
 p '5.Дан целочисленный массив. Преобразовать его, прибавив к четным числам первый элемент. Первый и последний элементы массива не изменять.'
-p 'arr=[1,52,6,49,23,30,28]'
-arr=[1,52,6,49,23,30,28]
+p 'arr=[2,52,6,49,23,28,28]'
+arr=[2,52,6,49,23,28,28]
 
 def Task_5 arr
-  arr.length.times do | i | 
-    if (arr[i] % 2 == 0) && (i != 0) && (i != (arr.length - 1))
-      arr[i] += arr[0]
-    end
-  end
-  p arr
+  p arr.map.with_index { |e, i|  e.even? && (i != 0 && i != (arr.count-1)) ? e + arr.first : e }
 end
 
 Task_5 arr
@@ -69,13 +67,9 @@ p '6.Дан целочисленный массив. Преобразовать 
 p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
-def Task_6 arr
-  arr.length.times do | i | 
-    if (arr[i] % 2 == 0) && (i != 0) && (i != (arr.length - 1))
-      arr[i] += arr[arr.length - 1]
-    end
-  end
-  p arr
+
+def Task_5 arr
+ p arr.map.with_index { |e, i|  e.even? && (i != 0 && i != (arr.count-1)) ? e + arr.last : e }
 end
 
 Task_6 arr
@@ -87,12 +81,7 @@ p 'arr=[1,52,6,49,23,30,28]'
 arr=[1,52,6,49,23,30,28]
 
 def Task_7 arr
-  arr.length.times do | i | 
-    if (arr[i] % 2 > 0) && (i != 0) && (i != (arr.length - 1))
-      arr[i] += arr[arr.length - 1]
-    end
-  end
- p arr
+  p arr.map.with_index { |e, i|  e.odd? && (i != 0 && i != (arr.count-1)) ? e + arr.last : e }
 end
 
 Task_7 arr
@@ -104,12 +93,7 @@ p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
 def Task_8 arr
-  arr.length.times do | i | 
-    if (arr[i] % 2 > 0) && (i != 0) && (i != (arr.length - 1))
-      arr[i] += arr[0]
-    end
-  end
-  p arr
+  p arr.map.with_index { |e, i|  e.odd? && (i != 0 && i != (arr.count-1)) ? e + arr.first : e }
 end
 
 Task_8 arr
@@ -121,16 +105,10 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_9 arr
-  arr.length.times do | i | 
-    if (arr[i] > 0)
-      arr[i] = arr.min
-    end
-  end
-  print arr
+  p arr.map { |e|  e.positive? ?  arr.min : e }
 end
 
 Task_9 arr
-puts
 p '----------------------------'
 
 
@@ -139,12 +117,7 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_10 arr
-  arr.length.times do | i | 
-    if (arr[i] > 0)
-      arr[i] = arr.max
-    end
-  end
-  print arr 
+  p arr.map { |e|  e.positive? ?  arr.max : e }
 end
 
 Task_10 arr
@@ -157,12 +130,7 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_11 arr
-  arr.length.times do | i | 
-    if (arr[i] < 0)
-      arr[i] = arr.min
-    end
-  end
-  print arr
+  p arr.map { |e|  e.negative? ?  arr.min : e }
 end
 
 Task_11 arr
@@ -175,16 +143,10 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_12 arr
-  arr.length.times do | i | 
-    if (arr[i] < 0)
-      arr[i] = arr.max
-    end
-  end
-  print arr
+  p arr.map { |e|  e.negative? ?  arr(max) : e }
 end
 
 Task_12 arr
-puts
 p '----------------------------'
 
 
