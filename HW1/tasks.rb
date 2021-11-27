@@ -6,7 +6,6 @@ def Task_1 arr
   p arr.select.with_index { |a, index| index.odd? }.concat arr.select.with_index { |a, index| index.even? }
 end
 
-end
 
 Task_1 (arr)
 p '----------------------------'
@@ -19,7 +18,6 @@ def Task_2  arr
   p arr.select.with_index { |a, index| index.even? }.concat arr.select.with_index { |a, index| index.odd? }
 end
 
-end
 
 Task_2(arr)
 p '----------------------------'
@@ -37,15 +35,12 @@ Task_3 arr
 p '----------------------------'
 
 
-p '4.Дан целочисленный массив. Вывести номер последнего из тех его элементов, которые удовлетворяют двойному неравенству: A[0] < A[i] < A[-1]. Если таких элементов нет, то вывести [ ].'																									
+p '4.Дан целочисленный массив. Вывести номер последнего из тех его элементов, которые удовлетворяют двойному неравенству: A[0] < A[i] < A[-1]. Если таких элементов нет, то вывести [ ].'                                                                                                   
 p 'arr=[1,52,6,49,23,30,27]'
 arr=[1,52,6,49,23,30,27]
 
 def Task_4 arr
   p arr.index { |element| arr[0] < element && element < arr[-1] } || []
-end
-  
-p @indexLastElement
 end
 
 Task_4 arr
@@ -72,7 +67,8 @@ def Task_5 arr
  p arr.map.with_index { |e, i|  e.even? && (i != 0 && i != (arr.count-1)) ? e + arr.last : e }
 end
 
-Task_6 arr
+Task_5 arr
+
 p '----------------------------'
   
 
@@ -100,7 +96,7 @@ Task_8 arr
 p '----------------------------'
 
 
-p '9.Дан целочисленный массив. Заменить все положительные элементы на значение минимального.'		
+p '9.Дан целочисленный массив. Заменить все положительные элементы на значение минимального.'       
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
@@ -121,11 +117,11 @@ def Task_10 arr
 end
 
 Task_10 arr
-puts
+
 p '----------------------------'
 
 
-p '11.Дан целочисленный массив. Заменить все отрицательные элементы на значение минимального.'	
+p '11.Дан целочисленный массив. Заменить все отрицательные элементы на значение минимального.'  
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
@@ -134,16 +130,16 @@ def Task_11 arr
 end
 
 Task_11 arr
-puts
+
 p '----------------------------'
 
 
-p '12.Дан целочисленный массив. Заменить все отрицательные элементы на значение максимального.	'
+p '12.Дан целочисленный массив. Заменить все отрицательные элементы на значение максимального.  '
 p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_12 arr
-  p arr.map { |e|  e.negative? ?  arr(max) : e }
+  p arr.map { |e|  e.negative? ?  arr.max : e }
 end
 
 Task_12 arr
@@ -155,11 +151,11 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_13 arr
-  print arr.rotate
+  p arr.rotate
 end 
 
 Task_13 arr
-puts
+
 p '----------------------------'
 
 
@@ -168,11 +164,11 @@ p 'arr=[1,52,-6,49,-23,30,27]'
 arr=[1,52,-6,49,-23,30,27]
 
 def Task_14 arr
-  print arr.rotate(-1)
+  p arr.rotate(-1)
 end
 
 Task_14 arr
-puts
+
 p '----------------------------'
 
 
@@ -232,7 +228,7 @@ end
 p '----------------------------'
 
 
-p '18.Дан целочисленный массив. Найти количество его локальных минимумов.	'
+p '18.Дан целочисленный массив. Найти количество его локальных минимумов.   '
 p 'arr=[1,11,4,27,81,3,729,576]'
 arr=[1,11,4,27,81,3,729,576]
 
@@ -268,7 +264,7 @@ Task_19 arr
 p '----------------------------'
 
 
-p '20.Дан целочисленный массив. Найти минимальный из его локальных минимумов.		'
+p '20.Дан целочисленный массив. Найти минимальный из его локальных минимумов.       '
 p 'arr=[1,11,14,13,81,564,729,576]'
 arr=[1,11,14,13,81,564,729,576]
 
@@ -279,7 +275,7 @@ def Task_20 arr
       arrMin.push(arr[i + 1])  
     end
   end
-  puts arrMin.min
+  p arrMin.min
 end
 
 Task_20 arr
@@ -321,7 +317,7 @@ def Task_22 (arr,r)
        nearestValue = arr[i]
     end
   end
-  puts nearestValue
+  p nearestValue
 end
 
 Task_22(arr,r)
@@ -342,8 +338,8 @@ def Task_23 (arr)
       count_shift += 1 
      end
     end
-  print arr_2
-  puts
+  p arr_2
+  p
 end
 
 Task_23 (arr)
@@ -364,9 +360,8 @@ def Task_24(arr)
          count_shift += 1 
       end
      end
-  print arr_2
-  puts
-end
+  p arr_2
+  end
 
 Task_24 (arr)
 p '----------------------------'
@@ -386,9 +381,8 @@ def Task_25 (arr)
         count_shift += 1 
       end
     end
-  print arr_2
-  puts
-end
+  p arr_2
+ end
 
 Task_25 (arr)
 p '----------------------------'
@@ -408,9 +402,8 @@ def Task_26(arr)
         count_shift += 1 
       end
     end
-  print arr_2
-  puts
-end
+  p arr_2
+ end
 
 Task_26 (arr)
 p '----------------------------'
@@ -421,24 +414,24 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task_27(arr)
-  print arr.sort
+  p arr.sort
 end
 
 Task_27(arr)
-puts
+
 p '----------------------------'
 
 
-p '28.Дан целочисленный массив. Упорядочить его по убыванию.	'
+p '28.Дан целочисленный массив. Упорядочить его по убыванию.    '
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task_28(arr)
-  print arr.sort.reverse
+  p arr.sort.reverse
 end
 
 Task_28(arr)
-puts
+
 p '----------------------------'
 
 
@@ -447,11 +440,11 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task_29(arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| -e }.map{ |e, i| i }
 end
 
 Task_29(arr)
-puts
+
 p '----------------------------'
 
 
@@ -460,11 +453,11 @@ p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task_30(arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }
 end
 
 Task_30(arr)
-puts
+
 p '----------------------------'
 
 
@@ -492,16 +485,16 @@ Task_32 (arr)
 p '----------------------------'
 
 
-p '33.Дан целочисленный массив. Найти индекс первого минимального элемента.	'
+p '33.Дан целочисленный массив. Найти индекс первого минимального элемента. '
 p 'arr=[1,52,-6,49,-99,27]'
 arr=[1,52,-6,49,-99,27]
 
 def Task_33 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
 end
 
 Task_33 (arr)
-puts
+
 p '----------------------------'
 
 
@@ -510,11 +503,11 @@ p 'arr=[1,52,-6,49,-99,52]'
 arr=[1,52,-6,49,-99,52]
 
 def Task_34 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first
 end
 
 Task_34 (arr)
-puts
+
 p '----------------------------'
 
 
@@ -523,11 +516,11 @@ p 'arr=[1,52,-6,49,-99,-99]'
 arr=[1,52,-6,49,-99,-99]
 
 def Task_35 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.last
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.last
 end
 
 Task_35 (arr)
-puts
+
 p '----------------------------'
 
 
@@ -536,11 +529,11 @@ p 'arr=[1,99,-6,49,99,1]'
 arr=[1,99,-6,49,99,1]
 
 def Task_36 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
 end
 
 Task_36 (arr)
-puts
+
 p '----------------------------'
 
 
@@ -568,7 +561,7 @@ Task_38 (arr)
 p '----------------------------'
 
 
-p '39.Дан целочисленный массив. Найти минимальный четный элемент.	'
+p '39.Дан целочисленный массив. Найти минимальный четный элемент.   '
 p ' arr = [21, 2, 3, 14, 61, 5, 74, 9]'
 arr = [21, 2, 3, 14, 61, 5, 74, 9]
 
@@ -645,11 +638,11 @@ p 'arr=[1,52,-6,49,-99,-99]'
 arr=[4,52,-6,1,-99,-99]
 
 def Task_45 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first
 end
 
 Task_45 (arr) 
-puts
+
 p '----------------------------'
 
 
@@ -658,11 +651,11 @@ p 'arr=[1,52,-6,49,99,99]'
 arr=[4,52,-6,1,99,99]
 
 def Task_46 (arr)
-  print arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first
+  p arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first
 end
 
 Task_46 (arr)
-  puts
+  
 p '----------------------------'
 
 
@@ -671,11 +664,11 @@ p 'arr=[1,99,-6,49,99,99]'
 arr=[4,99,-6,1,99,99]
 
 def Task_47 (arr)
-  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first - 1
+  p arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.first - 1
 end
 
 Task_47 (arr)
-puts
+
 p '----------------------------'
 
 
@@ -684,11 +677,11 @@ p 'arr=[4,-99,-6,1,-99,99]'
 arr=[4,-99,-6,1,-99,99]
 
 def Task_48 (arr)
-  print arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first - 1
+  p arr.length-arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.first - 1
 end
 
 Task_48 (arr) 
-puts
+
 p '----------------------------'
 
 
@@ -697,11 +690,11 @@ p 'arr=[4,52,-6,99,99,4]'
 arr=[4,52,-6,99,99,4]
 
 def Task_49 (arr)
-  print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
+  p  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| e }.map{ |e, i| i }.last
 end
 
 Task_49 (arr) 
-puts
+
 p '----------------------------'
 
 
@@ -710,8 +703,8 @@ p 'arr=[4,52,-6,-99,-99,4]'
 arr=[4,52,-6,-99,-99,4]
 
 def Task_50 (arr)
-  print  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.last
+  p  arr.map.with_index{ |e, i| [e, i] }.sort_by{ |e, i| - e }.map{ |e, i| i }.last
 end
 Task_50 (arr) 
-puts
+
 p '----------------------------'
