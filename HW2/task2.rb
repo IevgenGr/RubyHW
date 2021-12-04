@@ -147,13 +147,13 @@ class Pet
       if @level_hunger < 4 || @level_life == 1 || @level_mood == 1 || @level_weight == 1
         super_tablet
       end
-      send(@arr_method[rand(0..7)])  # Зачем здесь метод 'send'?
+      send(@arr_method[rand(0..7)])  # Зачем здесь метод 'send'? - вызов метода по имени
       sleep time_out
     end
   end
 
   def random_method
-    send(@arr_method[rand(0..7)]) # Зачем здесь метод 'send'?
+    send(@arr_method[rand(0..7)]) # Зачем здесь метод 'send'? - вызов метода по имени
   end
 
   def help
