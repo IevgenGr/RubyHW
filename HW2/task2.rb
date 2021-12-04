@@ -48,7 +48,7 @@ class Pet
       when 8
         spec_mission
       when 9
-        auto(15, 1)
+        auto(15, 1) # Отступы!
       when 10
         auto(1, 0)
       when 11
@@ -196,6 +196,11 @@ class Pet
   end
 end
 
+
+
+
+
+
 class Worm < Pet
   def spec_mission
     @leve_mission = @level_skill + @level_height
@@ -266,4 +271,3 @@ def start_menu
 end
 
 start_menu
-
