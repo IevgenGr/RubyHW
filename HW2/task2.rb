@@ -1,8 +1,11 @@
+require 'string_to_html'
 class Pet
+
   def initialize(name, pet_type)
     @name = name
     @pet_type = pet_type
     @asleep = false
+    @file_name = 'tamagochi_test.html'
     @level_hunger = 10
     @level_mood = 10
     @level_life = 100
@@ -12,7 +15,7 @@ class Pet
     @level_mission = 0
     @arr_method = %w[feed walk train sleeping game swim guest spec_mission]
     @arr_menu = ['1-кормить', '2-гулять', '3-тренироваться', '4-спать', '5-играть', '6-купаться', '7-ходить в гости',
-                 '8-выполнять миссию', '9-наблюдать (God mode)', '10-случайное действие', '11-помощь', '12-выход']
+                 '8-выполнять миссию', '9-наблюдать (God mode)', '10-случайное действие', '11-помощь', '12-выход','13-открыть html']
     @custom_message_guest = ['Земляной червь' => 'пополз в гости, пришлось долго копать, вес -1.',
                              'Гипопотам' => 'сходил в гости, заблудился, вес -1.', 'Еж' => 'сходил в гости, встретил лису, вес -1.']
     @custom_message_game = ['Земляной червь' => ' ,вылез из земли  и играет в Worms c другими червями.',
@@ -45,18 +48,23 @@ class Pet
       when 8
         spec_mission
       when 9
-        auto(15, 1) # Отступы!
+        auto(15, 1)
       when 10
         auto(1, 0)
       when 11
         help
       when 12
         abort 'Game over'
+      when 13
+        system("xdg-open #{Dir.pwd}/#{@file_name}")
       else
         puts 'Выбери один из доступных вариантов от 1 до 12'
       end
       puts " \nПоказатели: Сытость: #{@level_hunger}, Настроение: #{@level_mood}, Уровень здоровья %: #{@level_life},
             Масса: #{@level_weight}, Рост: #{@level_height}, Умение: #{@level_skill}, уровень выполнения мисии: #{@level_mission}\n"
+      to_html="#{@level_hunger},#{@level_mood},#{@level_life},#{@level_weight},#{@level_height},#{@level_skill},#{@level_mission}"
+      string_to_html(to_html, @file_name, true)
+
       puts 'Чем займемся? выбери цифру от 1 до 12'
       @arr_menu.each { |value| puts value }
       select_menu_item = gets.chomp.to_i
@@ -67,7 +75,7 @@ class Pet
 
   def feed
     if @level_hunger < 10
-      puts "Вы кормите #{@name}, сытость +1." # Почему в некоторых случаях ты используешь интерполяцию, а в некоторых конкатенацию? Не лучше ли, чтобы все было в одном стиле?
+      puts "Вы кормите #{@name}, сытость +1."
       @level_hunger += 2
       passage_of_time
     else
@@ -190,7 +198,7 @@ end
 
 class Worm < Pet
   def spec_mission
-    @leve_mission += @level_skill + @level_height
+    @leve_mission = @level_skill + @level_height
     @level_mood -= 2
     @level_hunger -= 1
     @level_weight -= 1
@@ -258,3 +266,4 @@ def start_menu
 end
 
 start_menu
+
