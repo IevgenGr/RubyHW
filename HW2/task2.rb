@@ -1,6 +1,10 @@
-require 'string_to_html'
-class Pet
+# frozen_string_literal: true
 
+require 'rubygems'
+require 'bundler/setup'
+require 'string_to_html'
+
+class Pet
   def initialize(name, pet_type)
     @name = name
     @pet_type = pet_type
@@ -15,11 +19,14 @@ class Pet
     @level_mission = 0
     @arr_method = %w[feed walk train sleeping game swim guest spec_mission]
     @arr_menu = ['1-кормить', '2-гулять', '3-тренироваться', '4-спать', '5-играть', '6-купаться', '7-ходить в гости',
-                 '8-выполнять миссию', '9-наблюдать (God mode)', '10-случайное действие', '11-помощь', '12-выход','13-открыть html']
+                 '8-выполнять миссию', '9-наблюдать (God mode)', '10-случайное действие', '11-помощь', '12-выход',
+                 '13-открыть html']
     @custom_message_guest = ['Земляной червь' => 'пополз в гости, пришлось долго копать, вес -1.',
-                             'Гипопотам' => 'сходил в гости, заблудился, вес -1.', 'Еж' => 'сходил в гости, встретил лису, вес -1.']
+                             'Гипопотам' => 'сходил в гости, заблудился, вес -1.',
+                             'Еж' => 'сходил в гости, встретил лису, вес -1.']
     @custom_message_game = ['Земляной червь' => ' ,вылез из земли  и играет в Worms c другими червями.',
-                            'Гипопотам' => 'сходил погонял туристов... вес -1.', 'Еж' => 'побегал ночью по лесу, пошуршал листвой, было весело... вес -1.']
+                            'Гипопотам' => 'сходил погонял туристов... вес -1.',
+                            'Еж' => 'побегал ночью по лесу, пошуршал листвой, было весело... вес -1.']
     puts "#{@name} родился он #{@pet_type} \n"
     menu
   end
@@ -27,9 +34,7 @@ class Pet
   def menu
     select_menu_item = 0
     until select_menu_item == 12
-      if @level_hunger < 1 || @level_life < 1 || @level_mood < 1 || @level_weight < 1
-        abort 'Миссия провалена , тамагочи не выжил.'
-      end
+      abort 'Миссия провалена , тамагочи не выжил.' if @level_hunger < 1 || @level_life < 1 || @level_mood < 1 || @level_weight < 1
       case select_menu_item
       when 1
         feed
@@ -48,7 +53,7 @@ class Pet
       when 8
         spec_mission
       when 9
-        auto(15, 1) # Отступы!
+        auto(15, 1)
       when 10
         auto(1, 0)
       when 11
@@ -61,9 +66,11 @@ class Pet
         puts 'Выбери один из доступных вариантов от 1 до 12'
       end
       puts " \nПоказатели: Сытость: #{@level_hunger}, Настроение: #{@level_mood}, Уровень здоровья %: #{@level_life},
-            Масса: #{@level_weight}, Рост: #{@level_height}, Умение: #{@level_skill}, уровень выполнения мисии: #{@level_mission}\n"
-      to_html="#{@level_hunger},#{@level_mood},#{@level_life},#{@level_weight},#{@level_height},#{@level_skill},#{@level_mission}"
-      string_to_html(to_html, @file_name, true)
+            Масса: #{@level_weight}, Рост: #{@level_height}, Умение: #{@level_skill},
+ уровень выполнения мисии: #{@level_mission}\n"
+      to_html = "#{@level_hunger},#{@level_mood},#{@level_life},#{@level_weight},#{@level_height},
+#{@level_skill},#{@level_mission}"
+      StringToHtml.new.string_to_html(to_html, @file_name, true)
 
       puts 'Чем займемся? выбери цифру от 1 до 12'
       @arr_menu.each { |value| puts value }
@@ -144,10 +151,8 @@ class Pet
 
   def auto(count_try, time_out)
     count_try.times do
-      if @level_hunger < 4 || @level_life == 1 || @level_mood == 1 || @level_weight == 1
-        super_tablet
-      end
-      send(@arr_method[rand(0..7)])  # Зачем здесь метод 'send'? - вызов метода по имени
+      super_tablet if @level_hunger < 4 || @level_life == 1 || @level_mood == 1 || @level_weight == 1
+      send(@arr_method[rand(0..7)]) # Зачем здесь метод 'send'? - вызов метода по имени
       sleep time_out
     end
   end
@@ -174,7 +179,8 @@ class Pet
 
   private
 
-  def passage_of_time # проходит некоторое время
+  # проходит некоторое время
+  def passage_of_time
     if @level_hunger.positive?
       @level_hunger -= 1
     else #  Наш Pet страдает от голода!
@@ -195,11 +201,6 @@ class Pet
     @level_life = 100
   end
 end
-
-
-
-
-
 
 class Worm < Pet
   def spec_mission
