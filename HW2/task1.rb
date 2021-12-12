@@ -19,10 +19,10 @@ p 'отсортировать от большего к меньшему' # +
 p array.sort { |a, b| b <=> a }
 
 p 'удалить все нечетные числа;' # +
-p array.delete_if {|el| el.odd?}
+p array.delete_if(&:odd?)
 
 p 'оставить только те числа, которые без остатка делятся на 3;' # +
-p array.select { |el| el % 3 == 0 }
+p array.select { |el| (el % 3).zero? }
 
 p 'удалить из массива числа, которые повторяются (то есть, нужно вывести массив, в котором нет повторов);' # +
 p array.uniq
@@ -31,18 +31,17 @@ p 'разделить каждый элемент на 10, в результат
 p array.map { |el| el.to_f / 10 }
 
 p 'получить новый массив, который бы содержал в себе те буквы английского алфавита, порядковый номер которых есть в нашем массиве;' # +
-p array.map { |el| ((el + 9).to_s(36)).length < 2 ? (el + 9).to_s(36) : nil }.compact
+p array.map { |el| (el + 9).to_s(36).length < 2 ? (el + 9).to_s(36) : nil }.compact
 
 p 'поменять местами минимальный и максимальный элементы массива;' # +
-array_tmp_5 = array
+array_tmp_one = array
 index_min_el = array.each_with_index.min[1]
 index_max_el = array.each_with_index.max[1]
-array_tmp_5[index_min_el],array_tmp_5[index_max_el]=array_tmp_5[index_max_el],array_tmp_5[index_min_el]
-p array_tmp_5
+array_tmp_one[index_min_el], array_tmp_one[index_max_el] = array_tmp_one[index_max_el], array_tmp_one[index_min_el]
+p array_tmp_one
 
 p 'найти элементы, которые находятся перед минимальным числом в массиве;' # +
 p array[0...array.index(array.min)]
 
 p 'необходимо найти три наименьших элемента.' # +
 p array.min(3)
-
