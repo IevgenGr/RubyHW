@@ -1,3 +1,22 @@
+
+### Using the gem with the tamagochi app: 
+You must put the tamagochi.rb file and Gemfile  in the project from:
+https://github.com/IevgenGr/RubyHW/tree/main/HW2/Tamagochi
+
+after that you can run tamagochi.rb 
+
+```ruby tamagochi.rb```
+
+and run bundle command in the terminal:
+
+```bundle install```
+
+
+# Gem for tamagochi.rb :
+https://github.com/IevgenGr/string_to_html
+
+
+
 # Запуск Тамагочи: 
  Просто запустить Task2. Далее навигация по меню.
 
