@@ -1,5 +1,24 @@
-# Запуск Тамагочи: 
- Просто запустить Task2. Далее навигация по меню.
+
+### Using the gem with the tamagochi app:
+You must put the tamagochi.rb file and Gemfile  in the project from:
+https://github.com/IevgenGr/RubyHW/tree/main/HW2/Tamagochi
+
+after that you can run tamagochi.rb
+
+```ruby tamagochi.rb```
+
+and run bundle command in the terminal:
+
+```bundle install```
+
+
+# Gem for tamagochi.rb :
+https://github.com/IevgenGr/string_to_html
+
+
+
+# Запуск Тамагочи:
+Просто запустить Task2. Далее навигация по меню.
 
 1 класс Pet, 3 подкласса.
 
@@ -9,7 +28,7 @@ ____
 
 Выбор вариантов действия осушествляется при помощи ввода значения меню с консоли .
 
-## Описание элементов меню: 
+## Описание элементов меню:
 
 + **кормить** - повышения показателя сытости +1
 
@@ -29,10 +48,9 @@ ____
 
 + **наблюдать (God mode)**- 15 случайных действий, возможность использования супер таблетки
 
-+ **случайное действие** - 1 случайное действие 
++ **случайное действие** - 1 случайное действие
 
 + **выход** - выход
 
 + **открыть html** - открытие html файла со статусом
-
 
