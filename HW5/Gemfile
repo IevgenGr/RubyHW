@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+gem 'rubocop', require: false
+gem 'sanitize'
+gem 'rack'
+gem 'webrick'
+# gem 'string_to_html'
+gem 'string_to_html', github: 'IevgenGr/string_to_html'
