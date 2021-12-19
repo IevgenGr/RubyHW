@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Страница питомца</title>
+  <meta name="description" content="Страница питомца">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid">
+<form class="form-horizontal">
+   <p>   </p>
+  <fieldset>
+    <h3> <%= @@pet.name  %>  родился он  <%= @@pet.pet_type  %> </h3>
+     <% @arr_parametr.each_index  do |index| %>
+      <p>   </p>
+      <h6> <%= @arr_message[index] %> -->> <%= @arr_parametr[index] %> </h6>
+      <% end  %>
+  </fieldset>
+ </form>
+
+<form class="form-horizontal-buton">
+       <label class="col-md-9 control-label" for="singlebutton">Чем займемся?</label>
+        <p>   </p>
+  <div class="col-md-9">
+        <button id="singlebutton" name="feed" class="btn btn-primary">feed</button>
+        <button id="singlebutton" name="walk" class="btn btn-primary">walk</button>
+        <button id="singlebutton" name="train" class="btn btn-primary">train</button>
+        <button id="singlebutton" name="sleeping" class="btn btn-primary">sleeping</button>
+        <button id="singlebutton" name="game" class="btn btn-primary">game</button>
+        <button id="singlebutton" name="swim" class="btn btn-primary">swim</button>
+        <button id="singlebutton" name="guest" class="btn btn-primary">guest</button>
+        <button id="singlebutton" name="spec_mission" class="btn btn-primary">spec_mission</button>
+        <button id="singlebutton" name="auto" class="btn btn-primary">auto 15 random method</button>
+  </div>
+</form>
+  <textarea class="form-control" rows="20" cols="100" id="textarea" name="textarea"><%= @@pet.log  %>  </textarea>
+</body>
+</div>
+</html>

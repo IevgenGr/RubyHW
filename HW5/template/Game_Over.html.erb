@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <title>Game over </title>
+  <meta name="description" content="Game over">
+</head>
+<body>
+<div class="container-fluid">
+
+<p> Game over  </p>
+<p> Game score = <%= @@pet.level_mission  %> </p>
+<p>  </p>
+  <div class="col-md-3">
+  <form action="/" method="get">
+    <button id="singlebutton" class="btn btn-primary" name="new_game" value="new_game">Начать новую игру</button>
+  </form>
+  </div>
+  <textarea class="form-control" rows="20" cols="100" id="textarea" name="textarea"><%= @@pet.log  %>  </textarea>
+
+</div>
+</body>
+</html>
