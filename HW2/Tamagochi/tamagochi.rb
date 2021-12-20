@@ -223,6 +223,14 @@ class Gipopotamus < Pet
     @level_skill += 4
     passage_of_time
   end
+
+  def level_hunger
+    # code here
+  end
+
+  def level_mood
+    # code here
+  end
 end
 
 class Hedgehog < Pet
