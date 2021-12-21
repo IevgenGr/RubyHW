@@ -167,7 +167,6 @@ end
 
 def create_pet(name, type_pet)
   name = 'Noname' if name == ''
-  p name
   type_pet = '1' if type_pet.nil?
 
   case type_pet
