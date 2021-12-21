@@ -8,7 +8,6 @@ class WebMetod
   end
 
   def self.call(env)
-    # [200, {"Content-Type" => "text/html"}, ["Hello Rack Participants from across the globe"]]
     new(env).response.finish
   end
 
